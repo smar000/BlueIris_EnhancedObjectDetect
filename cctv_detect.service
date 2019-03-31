@@ -1,0 +1,23 @@
+[Unit]
+Description=CCTV Object Detection Service
+
+[Service]
+# Type=idle
+
+ExecStart=/usr/bin/python -u /opt/cctv_detect/bi_alert_detect.py
+#ExecStart=/bin/bash -ce "/usr/bin/python /opt/cctv_detect/bi_alert_detect.py > /opt/cctv_detect/alert_detect.log 2>&1"
+
+WorkingDirectory=/opt/cctv_detect
+# StandardOutput=file:/opt/cctv_detect/cctv_detect.log
+# StandardError=file:/opt/cctv_detectcctv_detect.log
+StandardOutput=journal+console
+StandardError=inherit
+SyslogIdentifier=cctv_detect
+
+Restart=on-failure
+RestartSec=120
+
+
+[Install]
+Alias=cctv_detect
+WantedBy=default.target

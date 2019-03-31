@@ -1,0 +1,74 @@
+# AI framework - one of "AWS", "TF" and "SH" for Amazon Rekognition, TensorFlow and SightHound resp.
+# MODEL_SYSTEM = "AWS"
+MODEL_SYSTEM = "TF"
+# MODEL_SYSTEM = "SH"
+
+
+DEBUG = False
+
+# Push notifications
+PUSH_MQTT_ALERT = False #Send an alert back to BI camera with same name plus "_alert" suffix
+
+PUSH_PUSHBULLET_NOTIFICATION = False
+PUSHBULLET_API_KEY = ""
+
+PUSH_TELEGRAM_ALERT = True
+TELEGRAM_API_TOKEN = ""
+TELEGRAM_CHAT_ID = 
+
+# Note that even if set to True, original images are only saved if they do not have any identified objects
+SAVE_ORIGINAL_IMAGE = True
+
+# Processed images are those that have been processed AND have objects that we are looking for
+# Image name will include the objects recognised
+SAVE_PROCESSED_IMAGE = True
+TAG_IMAGES = True
+BOX_NON_TRIGGER_OBJECTS = True
+
+# Dictionary list of box corners by camera that are to be ignored - NOT YET IMPLEMENTED
+IGNORE_CAM_REGIONS = {"Driveway" : [[(600, 0), (800, 90)]]}
+
+# Object labels that we are looking for. These should match the labels used by the model being used
+# e.g. AWS Rekognition may have different labels to Coco data set (as used in the TensorFlow model) etc.
+DETECT_OBJECTS_DEFAULT = "Person"
+DETECT_OBJECTS_BY_CAMERA = {"Driveway" : "Person Car Lorry Van Truck Bike Motorcycle",
+                            "Side" : "Person Bike Motorcycle", 
+                            "GardenMain" : "Person"}
+
+#Confidence threshold is a percentage out of 100
+CONFIDENCE_THRESHOLD = 70.0
+
+# TensorFlow Model
+# TENSORFLOW_MODEL_DIRECTORY = "./ssd_mobilenet_v1_coco_2017_11_17"
+TENSORFLOW_MODEL_DIRECTORY = "./faster_rcnn_inception_v2_coco_2018_01_28"
+FROZEN_INFERENCE_GRAPH = "frozen_inference_graph.pb"
+
+
+# Sighthound Cloud
+SIGHTHOUND_DETECT_TYPES = "type=all&faceOption=gender"
+SIGHTHOUND_CLOUD_TOKEN = ""
+
+# Blue Iris Server (can use IP address in BI_SERVER)
+BI_SERVER = ""
+BI_PORT = 80
+BI_PROTOCOL = "http"
+BI_USER = ""
+BI_PW = ""
+
+# Scale is any number > 0. Quality is 1 to 100%
+BI_IMAGE_SCALE = 1.0
+BI_IMAGE_QUALITY = 100
+
+# This parameter basically says to treat camera names with anything before last "_" seperator
+# as cloned cameras e.g. "Driveway" and "Driveway_Cloned" would be treated as the same camera
+# (this helps by sharing stationary objects list between the cloned cameras)
+BI_CLONED_CAMERA_COMMON_NAMING = False
+
+# MQTT Broker
+MQTT_SERVER = ""
+MQTT_USER = ""
+MQTT_PW = ""
+MQTT_LISTEN_TOPIC = "BlueIris/alert"
+MQTT_PUBLISH_TOPIC = "BlueIris/admin"
+
+IMAGE_SAVE_PATH = "./images"
