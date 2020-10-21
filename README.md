@@ -1,5 +1,6 @@
 # BlueIris Enhanced Object Detection using Deep Learning AI Tools 
 
+*09 June 2020: Updated to python 3*
 
 BlueIris is a comprehensive CCTV management tool. However, whilst its object and motion detection is better than most in its category, it does suffer similar false alert issues arising from changing shadows, clouds, rain, trees etc that all such simple pixel change motion/object detection algorithms suffer from.
 
@@ -36,10 +37,10 @@ Python is not my main coding language and as such the code in the script could m
 ## Installation:
 
 ### Server Side
-The script has been developed on Python 2.7, installed on an Ubuntu 16.04 server (running on an ESXi virtual machine). In addition to python 2.7, the following libraries are required:
+The script has been tested on Python 3.6.8, installed on an Ubuntu 16.04 server (running on an ESXi virtual machine). In addition, the following python libraries are required:
 
     Core libraries:
-        -   cv2:            pip install python-opencv
+        -   cv2:            pip install opencv-python
         -   numpy:          pip install numpy
         -   paho:           pip install paho-mqtt
 
