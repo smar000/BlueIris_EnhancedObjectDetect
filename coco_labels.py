@@ -1,0 +1,22 @@
+''' COCO Dataset Labels '''
+
+LABELS = ["Unlabeled", "Person", "Bicycle", "Car", "Motorcycle", "Airplane", "Bus", "Train",
+               "Truck", "Boat", "Traffic Light", "Fire Hydrant", "Street Sign", "Stop Sign", "Parking Meter", "Bench",
+               "Bird", "Cat", "Dog", "Horse", "Sheep", "Cow", "Elephant", "Bear", "Zebra", "Giraffe", "Hat", "Backpack",
+               "Umbrella", "Shoe", "Eye Glasses", "Handbag", "Tie", "Suitcase", "Frisbee", "Skis", "Snowboard",
+               "Sports Ball", "Kite", "Baseball Bat", "Baseball Glove", "Skateboard", "Surfboard", "Tennis Racket",
+               "Bottle", "Plate", "Wine Glass", "Cup", "Fork", "Knife", "Spoon", "Bowl", "Banana", "Apple", "Sandwich",
+               "Orange", "Broccoli", "Carrot", "Hot Dog", "Pizza", "Donut", "Cake", "Chair", "Couch", "Potted Plant", "Bed",
+               "Mirror", "Dining Table", "Window", "Desk", "Toilet", "Door", "Tv", "Laptop", "Mouse", "Remote", "Keyboard",
+               "Cell Phone", "Microwave", "Oven", "Toaster", "Sink", "Refrigerator", "Blender", "Book", "Clock", "Vase",
+               "Scissors", "Teddy Bear", "Hair Drier", "Toothbrush", "Hair Brush", "Banner", "Blanket", "Branch", "Bridge",
+               "Building-Other", "Bush", "Cabinet", "Cage", "Cardboard", "Carpet", "Ceiling-Other", "Ceiling-Tile", "Cloth",
+               "Clothes", "Clouds", "Counter", "Cupboard", "Curtain", "Desk-Stuff", "Dirt", "Door-Stuff", "Fence",
+               "Floor-Marble", "Floor-Other", "Floor-Stone", "Floor-Tile", "Floor-Wood", "Flower", "Fog", "Food-Other",
+               "Fruit", "Furniture-Other", "Grass", "Gravel", "Ground-Other", "Hill", "House", "Leaves", "Light", "Mat",
+               "Metal", "Mirror-Stuff", "Moss", "Mountain", "Mud", "Napkin", "Net", "Paper", "Pavement", "Pillow",
+               "Plant-Other", "Plastic", "Platform", "Playingfield", "Railing", "Railroad", "River", "Road", "Rock",
+               "Roof", "Rug", "Salad", "Sand", "Sea", "Shelf", "Sky-Other", "Skyscraper", "Snow", "Solid-Other",
+               "Stairs", "Stone", "Straw", "Structural-Other", "Table", "Tent", "Textile-Other", "Towel", "Tree",
+               "Vegetable", "Wall-Brick", "Wall-Concrete", "Wall-Other", "Wall-Panel", "Wall-Stone", "Wall-Tile",
+               "Wall-Wood", "Water-Other", "Waterdrops", "Window-Blind", "Window-Other", "Wood"]
